@@ -1,20 +1,19 @@
 <?php
 
-function rataRataSuhu(array $data) : float {
+function rataRataSuhu(array &$data) : float {
     $total = array_sum($data);
     $jumlahData = count($data);
     return $total / $jumlahData;
 }
 
-function limaSuhuTerendah(array $data) : array {
+function limaSuhuTerendah(array &$data) : array {
     sort($data);
     return array_slice($data, 0, 5);
 }
 
-function limaSuhuTertinggi(array $data) : array {
+function limaSuhuTertinggi(array &$data) : array {
     rsort($data);
     return array_slice($data, 0, 5);
-
 }
 
 

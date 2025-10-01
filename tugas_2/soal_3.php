@@ -1,6 +1,6 @@
 <?php
 
-function convertToRupiah(int $jumlah, string $mataUang, array $rate) : string {
+function convertToRupiah(int &$jumlah, string &$mataUang, array &$rate) : string {
     if(!array_key_exists($mataUang,$rate)){
         return "Mata uang $mataUang tidak ditemukan";
     }
